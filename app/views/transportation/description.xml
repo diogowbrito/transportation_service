@@ -1,0 +1,8 @@
+<record title="Serviço sobre Transportes">
+  <text>Este serviço fornece informação sobre os próximos transportes a saírem da FCT</text>
+  <text>Os transportes são MTS, Fertagus e TST</text>
+  <link href="http://localhost:3005/mts">Horário MTS</link>
+  <link href="http://localhost:3005/fertagus">Horário Fertagus</link>
+  <link href="http://localhost:3005/tst">Horário TST</link>
+  <link href="http://localhost:3005/all>">Todos os horários</link>
+</record>

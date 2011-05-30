@@ -1,0 +1,49 @@
+<service name="Transportations" url="http://localhost:3005">
+  <provider>G06</provider>
+  <serviceID>trans</serviceID>
+  <type>transportation</type>
+  <tags>
+    <tag>mts</tag>
+    <tag>fertagus</tag>
+    <tag>tst</tag>
+  </tags>
+  <search>no</search>
+  <referedEntities></referedEntities>
+  <informedEntities>
+    <entity>transportation</entity>
+  </informedEntities>
+  <competences>
+    <competence path="/index" httpOp="">
+      <ctype>Home</ctype>
+      <description>Devolve a descrição do serviço</description>
+      <arglist/>
+      <interactionType>Indirect</interactionType>
+      <tags/>
+    </competence>
+    <competence path="/status" httpOp="">
+      <ctype>Status</ctype>
+      <description>Devolve o estado o serviço</description>
+      <arglist/>
+      <interactionType>Indirect</interactionType>
+      <tags/>
+    </competence>
+    <competence path="/metainfo" httpOp="">
+      <ctype>Metainfo</ctype>
+      <description>Devolve a meta info do serviço</description>
+      <arglist/>
+      <interactionType>Indirect</interactionType>
+      <tags/>
+    </competence>
+    <competence path="/recommendation" httpOp="">
+      <ctype>Recommendation</ctype>
+      <description>Devolve as recomendações para uma palavra</description>
+      <arglist>
+        <arg optional="false">keyword</arg>
+        <arg optional="true">start</arg>
+        <arg optional="true">end</arg>
+      </arglist>
+      <interactionType>Indirect</interactionType>
+      <tags/>
+    </competence>
+  </competences>
+</service>

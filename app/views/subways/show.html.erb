@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hour:</b>
+  <%= @subway.hour %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @subway.day %>
+</p>
+
+
+<%= link_to 'Edit', edit_subway_path(@subway) %> |
+<%= link_to 'Back', subways_path %>
