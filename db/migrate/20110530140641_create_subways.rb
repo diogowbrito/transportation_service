@@ -1,7 +1,7 @@
 class CreateSubways < ActiveRecord::Migration
   def self.up
     create_table :subways do |t|
-      t.time :hour
+      t.integer :hour
       t.integer :day
 
       t.timestamps

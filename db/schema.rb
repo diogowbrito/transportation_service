@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(:version => 20110530140641) do
 
   create_table "subways", :force => true do |t|
-    t.time     "hour"
+    t.integer  "hour"
     t.integer  "day"
     t.datetime "created_at"
     t.datetime "updated_at"

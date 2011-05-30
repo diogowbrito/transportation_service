@@ -5,6 +5,10 @@ Transportations::Application.routes.draw do
   match "metainfo" => "Transportation#meta_info", :defaults => { :format => :xml}
   match "index" => "Transportation#description", :defaults => { :format => :xml}
   match "status" => "Transportation#status", :defaults => { :format => :xml}
+
+  # MTS
+  match "mts" => "Subways#specific", :defaults => { :format => :xml }
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
