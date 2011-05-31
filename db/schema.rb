@@ -10,11 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110530140641) do
+ActiveRecord::Schema.define(:version => 20110531171026) do
+
+  create_table "buses", :force => true do |t|
+    t.integer  "hour"
+    t.integer  "day"
+    t.string   "direction"
+    t.integer  "number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "subways", :force => true do |t|
     t.integer  "hour"
     t.integer  "day"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trains", :force => true do |t|
+    t.integer  "hour"
+    t.integer  "day"
+    t.string   "direction"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  hour: 1
+  day: 1
+  direction: MyString
+  number: 1
+
+two:
+  hour: 1
+  day: 1
+  direction: MyString
+  number: 1

@@ -1,4 +1,8 @@
 Transportations::Application.routes.draw do
+  resources :buses
+
+  resources :trains
+
   resources :subways
 
    # Transportation
@@ -7,7 +11,13 @@ Transportations::Application.routes.draw do
   match "status" => "Transportation#status", :defaults => { :format => :xml}
 
   # MTS
-  match "mts" => "Subways#specific", :defaults => { :format => :xml }
+  match "mts" => "Subways#list", :defaults => { :format => :xml }
+
+  # Fertagus
+  match "fertagus" => "Trains#list", :defaults => { :format => :xml }
+
+  #TST
+  match "tst" => "Buses#list", :defaults => { :format => :xml }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,29 @@
+<h1>Listing buses</h1>
+
+<table>
+  <tr>
+    <th>Hour</th>
+    <th>Day</th>
+    <th>Direction</th>
+    <th>Number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @buses.each do |bus| %>
+  <tr>
+    <td><%= bus.hour %></td>
+    <td><%= bus.day %></td>
+    <td><%= bus.direction %></td>
+    <td><%= bus.number %></td>
+    <td><%= link_to 'Show', bus %></td>
+    <td><%= link_to 'Edit', edit_bus_path(bus) %></td>
+    <td><%= link_to 'Destroy', bus, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bus', new_bus_path %>

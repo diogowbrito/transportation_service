@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hour:</b>
+  <%= @bus.hour %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @bus.day %>
+</p>
+
+<p>
+  <b>Direction:</b>
+  <%= @bus.direction %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @bus.number %>
+</p>
+
+
+<%= link_to 'Edit', edit_bus_path(@bus) %> |
+<%= link_to 'Back', buses_path %>

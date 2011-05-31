@@ -1,4 +1,4 @@
-<service name="Transportations" url="http://localhost:3005">
+<service name="transportations" url="http://localhost:3005">
   <provider>G06</provider>
   <serviceID>trans</serviceID>
   <type>transportation</type>

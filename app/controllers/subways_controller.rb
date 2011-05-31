@@ -1,35 +1,21 @@
 class SubwaysController < ApplicationController
 
-  def specific
+
+  def list
     @start = (params[:start] || '1').to_i
     @end = (params[:end] || '20').to_i
     t = Time.now
     time = t.strftime("%H%M")
-
-    day = t.wday
-    if day == 1 || 2 || 3 || 4 || 5
-      day = 1
-    elsif day == 6
-      day = 2
-    else
-      day = 3
-    end
+    puts t.wday
+    day = aux_day_with_sunday(t.wday)
 
     @subways = Subway.where("hour >= ? AND day = ?", time, day).order(:hour).limit(@end)
     size = @subways.size
     if size < @end
-      puts t
       t = t.beginning_of_day
       time = t.strftime("%H%M")
 
-      day = t.wday
-      if day == 1 || 2 || 3 || 4 || 5
-        day = 1
-      elsif day == 6
-        day = 2
-      else
-        day = 3
-      end
+      day = aux_day_with_sunday(t.wday)
 
       temp = Subway.where("hour >= ? AND day = ?", time, day).order(:hour).limit(@end-size)
 

@@ -1,0 +1,27 @@
+<h1>Listing trains</h1>
+
+<table>
+  <tr>
+    <th>Hour</th>
+    <th>Day</th>
+    <th>Direction</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @trains.each do |train| %>
+  <tr>
+    <td><%= train.hour %></td>
+    <td><%= train.day %></td>
+    <td><%= train.direction %></td>
+    <td><%= link_to 'Show', train %></td>
+    <td><%= link_to 'Edit', edit_train_path(train) %></td>
+    <td><%= link_to 'Destroy', train, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Train', new_train_path %>
