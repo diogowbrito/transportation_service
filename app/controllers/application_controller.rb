@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   def get_address
     port = request.port
     host = request.host
-    return "http://"+host.to_s+":"+port.to_s+"/"
+    return "http://"+host.to_s+":"+port.to_s
   end
 
   def aux_day_with_sunday(day)
