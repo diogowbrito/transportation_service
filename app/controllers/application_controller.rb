@@ -1,6 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper_method :aux_day_with_sunday, :aux_day_without_sunday, :aux_hour_filler
+  helper_method :aux_day_with_sunday, :aux_day_without_sunday, :aux_hour_filler, :get_address
+
+  def get_address
+    port = request.port
+    host = request.host
+    return "http://"+host.to_s+":"+port.to_s+"/"
+  end
 
   def aux_day_with_sunday(day)
     if day == (1 || 2 || 3 || 4 || 5)

@@ -1,10 +1,12 @@
 class TransportationController < ApplicationController
 
   def meta_info
+    @address = get_address
     respond_to :xml
   end
 
   def description
+    @address = get_address
     respond_to :xml
   end
 
