@@ -9,6 +9,7 @@ Transportations::Application.routes.draw do
   match "metainfo" => "Transportation#meta_info", :defaults => { :format => :xml}
   match "index" => "Transportation#description", :defaults => { :format => :xml}
   match "status" => "Transportation#status", :defaults => { :format => :xml}
+  match "all" => "Transportation#all_transportations", :defaults => { :format => :xml }
 
   # MTS
   match "mts" => "Subways#list", :defaults => { :format => :xml }
