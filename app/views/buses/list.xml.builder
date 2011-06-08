@@ -1,4 +1,4 @@
-xml.list(:title => "TST") do
+xml.list(:title => "Horário TST") do
   @buses.each do |sub|
     temp = sub.hour.to_s
     insert = aux_hour_filler(temp)

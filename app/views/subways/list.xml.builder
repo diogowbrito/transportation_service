@@ -1,4 +1,4 @@
-xml.list(:title => "MTS") do
+xml.list(:title => "Horário MTS") do
   @subways.each do |sub|
     temp = sub.hour.to_s
     insert = aux_hour_filler(temp)
