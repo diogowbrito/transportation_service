@@ -6,6 +6,7 @@ Transportations::Application.routes.draw do
   resources :subways
 
    # Transportation
+  root :to => "Transportation#description", :defaults => { :format => :xml}
   match "metainfo" => "Transportation#meta_info", :defaults => { :format => :xml}
   match "index" => "Transportation#description", :defaults => { :format => :xml}
   match "status" => "Transportation#status", :defaults => { :format => :xml}
