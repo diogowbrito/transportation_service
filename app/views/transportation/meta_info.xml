@@ -1,4 +1,4 @@
-<service name="transportations" url="<%=@address%>">
+<service name="TransportesFCT" url="<%=@address%>">
   <provider>G06</provider>
   <serviceID>trans</serviceID>
   <type>transportation</type>
