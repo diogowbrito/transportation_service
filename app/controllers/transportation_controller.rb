@@ -17,7 +17,7 @@ class TransportationController < ApplicationController
   def all_transportations
     @start = (params[:start] || '1').to_i
     @end = (params[:end] || '7').to_i
-    @next = get_address+'/all?start='+(@end+1).to_s+'&end='+(@end+1+@end-@start).to_s
+    @next = ""
     @count = (@end - @start) / 3
     t = Time.now
     time = t.strftime("%H%M")
